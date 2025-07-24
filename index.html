@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOVIVIEW - Movie Info</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<div class="body-overlay">
+<body class="bg-dark text-light">
+<!-- Decorative corner images -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+<div class="container-fluid">
+  
+    <a class="navbar-brand" href="#">MOVIEVIEW</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <!-- Movies Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="moviesDropdown" role="button" data-bs-toggle="dropdown">
+            Movies
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="movies.html?type=bollywood&category=movie">Bollywood</a></li>
+            <li><a class="dropdown-item" href="movies.html?type=hollywood&category=movie">Hollywood</a></li>
+            <li><a class="dropdown-item" href="movies.html?type=gujarati&category=movie">Gujarati</a></li>
+          </ul>
+        </li>
+
+        <!-- Series Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="seriesDropdown" role="button" data-bs-toggle="dropdown">
+            Series
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="movies.html?type=bollywood&category=series">Bollywood</a></li>
+            <li><a class="dropdown-item" href="movies.html?type=hollywood&category=series">Hollywood</a></li>
+            <li><a class="dropdown-item" href="movies.html?type=gujarati&category=series">Gujarati</a></li>
+          </ul>
+        </li>
+
+        <!-- Other Links -->
+       <li class="nav-item px-3">
+  <a class="nav-link" href="index.html#contactSection">Contact</a>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutSection">About</a>
+        </li>
+      </ul>
+    </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <form onsubmit="handleSearch(event)" class="d-flex ms-auto" role="search">
+  <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Movies..." aria-label="Search">
+  <button class="btn btn-outline-light" type="submit">Search</button>
+</form>
+
+    </div>
+</div>
+  
+
+</nav>
+
+  <header class="hero-header text-center text-light">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1 class="display-4 fw-bold">Explore Movies & Reviews</h1>
+      <p class="lead">Watch trailers, rate movies and read reviews</p>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <h2 class="mb-4">Movie Collection</h2>
+    <div class="scrolling-wrapper d-flex flex-nowrap overflow-auto pb-4" id="movieRow">
+      <!-- Movie cards will be injected here -->
+    </div>
+  </div>
+<div class="container my-5">
+  <h2 class="mb-4"><span style="color: #c30d0d;">
+Top News</span></h2>
+  <div class="news-section d-flex overflow-auto">
+    <div class="news-card">
+      <img src="ww.jpg" alt="WW" />
+      <div class="news-content">
+        <h5>‘Wonder Woman’ Movie Eyes ‘Supergirl’ Scribe Ana Nogueira</h5>
+        <p class="news-date">Jul 21 - The Hollywood Reporter</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <img src="oscar.jpg" alt="Oscar News" />
+      <div class="news-content">
+        <h5>Film Academy’s Submissions Site Opens for Oscar Hopefuls</h5>
+        <p class="news-date">Jul 22 - The Hollywood Reporter</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <img src="cosby.jpg" alt="Cosby News" />
+      <div class="news-content">
+        <h5>‘The Cosby Show’ Star Dies in Accidental Drowning at 54</h5>
+        <p class="news-date">Jul 21 - The Hollywood Reporter</p>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <div class="container my-5">
+  <h2 class="mb-3"><span style="color: #c30d0d;">
+Top box office (IND)</span> <small class="text-muted fs-6">Weekend of July 18–20</small></h2>
+  <div class="box-office-list">
+    <div class="box-office-item">
+      <span class="rank">1</span>
+      <span class="movie-title">Superman</span>
+      <span class="earnings">$58M</span>
+    </div>
+    <div class="box-office-item">
+      <span class="rank">2</span>
+      <span class="movie-title">Jurassic World: Rebirth</span>
+      <span class="earnings">$24M</span>
+    </div>
+    <div class="box-office-item">
+      <span class="rank">3</span>
+      <span class="movie-title">I Know What You Did Last Summer</span>
+      <span class="earnings">$13M</span>
+    </div>
+    <div class="box-office-item">
+      <span class="rank">4</span>
+      <span class="movie-title">Smurfs</span>
+      <span class="earnings">$11M</span>
+    </div>
+    <div class="box-office-item">
+      <span class="rank">5</span>
+      <span class="movie-title">F1: The Movie</span>
+      <span class="earnings">$9.9M</span>
+    </div>
+    <div class="box-office-item">
+      <span class="rank">6</span>
+      <span class="movie-title">How to Train Your Dragon</span>
+      <span class="earnings">$5.4M</span>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <h2 class="mb-3"><span style="color: #c30d0d;">
+In theaters</span> <small class="text-muted fs-6">Showtimes near you</small></h2>
+  <div class="scrolling-wrapper d-flex flex-nowrap overflow-auto" id="inTheaters">
+    <!-- Movie Cards -->
+    <div class="in-theater-card">
+      <img src="Saiyaara-1.jpg" alt="Saiyaara" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 8.1</div>
+        <h6 class="fw-bold">Saiyaara</h6>
+          <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+         <a href="https://www.youtube.com/watch?v=C-lBlrIigSQ" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+
+    <div class="in-theater-card">
+      <img src="mallik.jpg" alt="Maalik" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 7.4</div>
+        <h6 class="fw-bold">Maalik</h6>
+        <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+          <a href="https://www.youtube.com/watch?v=QYkQlTykCk4" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+
+    <div class="in-theater-card">
+      <img src="sanghvi.jpeg" alt="Sanghavi and Sons" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 9.3</div>
+        <h6 class="fw-bold">Sanghavi and Sons</h6>
+        <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+        <a href="https://www.youtube.com/watch?v=QSMPIYWxXmw" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+
+    <div class="in-theater-card">
+      <img src="jura.jpg" alt="Jurassic World: Rebirth" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 6.2</div>
+        <h6 class="fw-bold">Jurassic World: Rebirth</h6>
+        <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+        <a href="https://www.youtube.com/watch?v=jan5CFWs9ic" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+
+    <div class="in-theater-card">
+      <img src="superman.jpg " alt="Superman" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 7.6</div>
+        <h6 class="fw-bold">Superman</h6>
+        <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+        <a href="https://www.youtube.com/watch?v=Ox8ZLF6cGM0" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+
+    <div class="in-theater-card">
+      <img src="sitarre.jpg" alt="Sitaare Zameen Par" />
+      <div class="p-3">
+        <div class="rating"><i class="fas fa-star text-warning"></i> 7.1</div>
+        <h6 class="fw-bold">Sitaare Zameen Par</h6>
+        <button class="btn btn-outline-primary btn-sm w-100 mb-1">Showtimes</button>
+        <a href="https://www.youtube.com/watch?v=YH6k5weqwy8" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-outline-light btn-sm w-100">
+      ▶ Trailer
+    </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container text-light my-4 p-4" style="background-color: #1e1e1e; border-radius: 15px;color:#bcb5b5;">
+  <!-- <h4  style="color: #c30d0d;">ABOUT MOVIVIEW</h4> -->
+   <p class="mb-4 lead">
+    Have questions, feedback, or partnership ideas? We're here to help! Reach out using the form below and our MOVIVIEW team will get back to you as soon as possible.
+  </p>
+</div>
+<div id="contactSection" class="container my-5 text-light">
+  <h2 class="mb-4" style="color: #c30d0d;">Contact Us</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control bg-dark text-light border-secondary" id="name" placeholder="Your name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control bg-dark text-light border-secondary" id="email" placeholder="Your email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control bg-dark text-light border-secondary" id="message" rows="4" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger">Send Message</button>
+      </form>
+    </div>
+    <div class="col-md-6 d-flex align-items-center">
+      <p class="lead">We’d love to hear your feedback or inquiries. Fill the form and our team will get back to you as soon as possible!</p>
+    </div>
+  </div>
+</div>
+<div id="aboutSection" class="container text-light my-4 p-4" style="background-color: #1e1e1e; border-radius: 15px;">
+  <h4 style="color: #c30d0d;">ABOUT MOVIVIEW</h4>
+  <p style="font-size: 1rem; line-height: 1.8;">
+    Welcome to <strong>MOVIVIEW</strong> — your one-stop destination for all things cinema. Discover movies currently in theaters, watch trailers, read reviews, and explore ratings before you hit the big screen. Whether you're a fan of thrillers, romantic dramas, action-packed adventures, or indie gems, MOVIVIEW helps you stay updated with the latest releases near you. Enjoy a seamless, stylish experience tailored for true movie lovers.
+  </p>
+</div>
+
+
+  <footer>
+    <p>© 2025 MOVIEVIEW. Designed by Milan Gohil</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</div>
+</html>
