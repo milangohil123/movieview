@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOVIVIEW - Movie Info</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/posters/style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    body {
+      background-color: #121212;
+    }
+
     .scrolling-wrapper {
       display: flex;
       overflow-x: auto;
@@ -51,6 +55,31 @@
       padding: 1rem;
     }
 
+    .hero-header {
+      background: url('assets/posters/270b21dd-8f3f-41e7-95a3-efca05d91bf6.jpg') no-repeat center center/cover;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-header .header-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
     @media (max-width: 768px) {
       .in-theater-card,
       .news-card {
@@ -58,11 +87,24 @@
       }
 
       .header-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
 
       .header-content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .scrolling-wrapper {
+        gap: 0.5rem;
+      }
+
+      #movieRow {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      .movie-card {
+        width: 140px;
       }
 
       .box-office-item {
@@ -112,7 +154,8 @@
     </div>
   </nav>
 
-  <header class="hero-header text-center text-light py-5">
+  <header class="hero-header text-center text-light">
+    <div class="overlay"></div>
     <div class="header-content">
       <h1 class="display-4 fw-bold">Explore Movies & Reviews</h1>
       <p class="lead">Watch trailers, rate movies and read reviews</p>
@@ -121,7 +164,9 @@
 
   <div class="container my-5">
     <h2 class="mb-4">Movie Collection</h2>
-    <div class="scrolling-wrapper" id="movieRow"></div>
+    <div class="scrolling-wrapper" id="movieRow">
+      <!-- Movie cards will be injected here -->
+    </div>
   </div>
 
   <div class="container my-5">
@@ -202,4 +247,3 @@
 </body>
 
 </html>
-s
