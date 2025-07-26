@@ -6,6 +6,54 @@ body {
   /* border: solid 20px rgb(14, 14, 15); */
 
 }
+/* Make the scrolling wrapper work like horizontal carousel */
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+/* Hide scrollbar for aesthetic */
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.scrolling-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card Styling */
+.movie-card {
+  flex: 0 0 auto;
+  width: 140px;
+  border-radius: 12px;
+  background-color: #1c1c1c;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  border-radius: 12px 12px 0 0;
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movie-card {
+    width: 140px;
+  }
+  .movie-card img {
+    height: 200px;
+  }
+}
 
 
 .card {
@@ -218,7 +266,7 @@ body {
   color: black;
 }
 /* Responsive */
-@media (max-width: 576px) {
+@media (max-width: 500px) {
   .box-office-item {
     flex-direction: column;
     align-items: flex-start;
