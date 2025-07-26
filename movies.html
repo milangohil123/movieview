@@ -393,24 +393,18 @@ if (search) {
 }
 
 // Render cards
-if (filteredMovies.length === 0) {
-  movieContainer.innerHTML = "<h3 class='text-light text-center'>No results found.</h3>";
-} else {
-  filteredMovies.forEach((movie) => {
-    const card = document.createElement("div");
-    card.className = "col-md-3 mb-4";
-    card.innerHTML = `
-      <div class="card bg-dark text-white border border-danger shadow-lg">
-        <img src="${movie.poster}" class="card-img-top" alt="${movie.title}">
-        <div class="card-body text-center">
-          <h5 class="card-title">${movie.title}</h5>
-          <p class="card-text">⭐ ${movie.rating}</p>
-        </div>
+const card = `
+  <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+    <div class="movie-card">
+      <img src="${movie.poster}" class="movie-poster" alt="${movie.title}">
+      <div class="movie-details">
+        <strong>${movie.title}</strong><br>
+        <span>${movie.info}</span>
       </div>
-    `;
-    movieContainer.appendChild(card);
-  });
-}
+    </div>
+  </div>
+`;
+
 
   </script>
   <script>
