@@ -6,6 +6,12 @@ body {
   /* border: solid 20px rgb(14, 14, 15); */
 
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
 /* Make the scrolling wrapper work like horizontal carousel */
 .scrolling-wrapper {
   display: flex;
