@@ -1,637 +1,612 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOVIVIEW - Content</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-   body {
-  font-feature-settings: "smcp", "zero";
-  font-size: x-large;
-  background-image: url("posterp3.jpg");
-  
-  font-feature-settings: "smcp", "zero";
-  font-size: x-large;
-  padding: none !important;
-  /* background-image: url('posterp3.jpg'); */
-  /* border: solid 20px rgb(14, 14, 15); */
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVIVIEW - Content</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+    body {
+    font-feature-settings: "smcp", "zero";
+    font-size: x-large;
+    background-image: url("posterp3.jpg");
+    
+    font-feature-settings: "smcp", "zero";
+    font-size: x-large;
+    padding: none !important;
+    /* background-image: url('posterp3.jpg'); */
+    /* border: solid 20px rgb(14, 14, 15); */
 
-}
-.body-overlay{
-   background-color: rgba(0, 0, 0, 0.8);
-
-}
-.navbar{
-  border-bottom: none;
-  box-shadow: none;
-  background-color: black !important;
-}
-.navbar .nav-link {
-  color: white !important;
-  font-size:x-large;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.navbar .nav-link:hover {
-  color: #c30d0d !important;
-}
-/* Dropdown menu background */
-.dropdown-menu {
-  background-color: black !important;
-  border: none;
-}
-
-/* Dropdown links */
-.dropdown-menu .dropdown-item {
-  color: white !important;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* On hover: red text, slightly darker background */
-.dropdown-menu .dropdown-item:hover {
-  color: #c30d0d !important;
-  background-color: #1a1a1a !important;
-}
-.navbar-brand{
-  color:  #c30d0d;;
-  font-feature-settings: "smcp", "zero";
-
-  font-size:x-large;
-  padding: 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  
-
-}
-.btn {
-  background-color: #c30d0d !important;
-  color: black !important;
-  border: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background-color: #0b0b0b !important;
-  color: #c30d0d !important;
-border: none;
-}
-.navbar .form-control {
-  background-color: black;
-  color: white;
-  border: 1px solid #444;
-}
-.section-title {
-      font-size: 2rem;
-      color: #e50914;
-      margin-bottom: 1rem;
-      font-feature-settings: "smcp", "zero";
-      background-color: black;
-      
-    }
-
-.team-member {
-      text-align: center;
-      padding: 20px;
-      font-feature-settings: "smcp", "zero";
-    }
-
-.team-member img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-footer {
-      background-color: black;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-      color: #bbb;
-      font-feature-settings: "smcp", "zero";
-    }
-.navbar .form-control::placeholder {
-  color: #aaa;
-}
-.card {
-  background-color: black;
-  border: solid 7px black;
-  border-radius: 5px;
-  color: white;
-  min-width: 170px; 
-  max-width: 240px;
-  margin-right: 20px;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card img {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  height: 320px;
-  object-fit: cover;
-}
-.navbar {
-  background-color: black !important;
-  border-bottom: none;
-  box-shadow: none;
-}
-
-.navbar-brand {
-  font-weight: bold;
-  font-size:large;
-  color: #c30d0d!important;
-  letter-spacing: 1px;
-  font-feature-settings: "smcp", "zero";
-}
-
-.movies-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 20px;
-}
-
-.movie-card {
-  width: calc(25% - 20px); /* 4 cards per row with gap */
-  box-sizing: border-box;
-  background-color: #111;
-  border: 1px solid #333;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive layout for smaller screens */
-@media (max-width: 992px) {
-  .movie-card {
-    width: calc(33.33% - 20px); /* 3 per row */
   }
-}
+  .body-overlay{
+    background-color: rgba(0, 0, 0, 0.8);
 
-@media (max-width: 768px) {
-  .movie-card {
-    width: calc(50% - 20px); /* 2 per row */
   }
-}
-
-@media (max-width: 500px) {
-  .movie-card {
-    width: 100%; /* 1 per row on very small screens */
+  .navbar{
+    border-bottom: none;
+    box-shadow: none;
+    background-color: black !important;
   }
-}
-
-  .hero-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-header p {
-    font-size: 1rem;
-  }
-
-  .scrolling-wrapper {
-    gap: 0.5rem;
-    padding-bottom: 1rem;
-  }
-
-  .card,
-  .in-theater-card,
-  .news-card {
-    width: 40px !important;
-    margin-right: 10px;
-  }
-
-  .card img,
-  .in-theater-card img {
-    height: 200px !important;
-  }
-
-  .news-card img {
-    height: 150px !important;
-  }
-
-  .container,
-  .box-office-item,
-  .navbar-brand,
   .navbar .nav-link {
-    font-size: 0.9rem !important;
+    color: white !important;
+    font-size:x-large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  .form-control,
-  .btn {
-    font-size: 0.9rem !important;
+  .navbar .nav-link:hover {
+    color: #c30d0d !important;
   }
-
-  .navbar-toggler {
+  /* Dropdown menu background */
+  .dropdown-menu {
+    background-color: black !important;
     border: none;
   }
 
-  .navbar-toggler:focus {
+  /* Dropdown links */
+  .dropdown-menu .dropdown-item {
+    color: white !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* On hover: red text, slightly darker background */
+  .dropdown-menu .dropdown-item:hover {
+    color: #c30d0d !important;
+    background-color: #1a1a1a !important;
+  }
+  .navbar-brand{
+    color:  #c30d0d;;
+    font-feature-settings: "smcp", "zero";
+
+    font-size:x-large;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    
+
+  }
+  .btn {
+    background-color: #c30d0d !important;
+    color: black !important;
+    border: none;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background-color: #0b0b0b !important;
+    color: #c30d0d !important;
+  border: none;
+  }
+  .navbar .form-control {
+    background-color: black;
+    color: white;
+    border: 1px solid #444;
+  }
+  .section-title {
+        font-size: 2rem;
+        color: #e50914;
+        margin-bottom: 1rem;
+        font-feature-settings: "smcp", "zero";
+        background-color: black;
+        
+      }
+
+  .team-member {
+        text-align: center;
+        padding: 20px;
+        font-feature-settings: "smcp", "zero";
+      }
+
+  .team-member img {
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+  footer {
+        background-color: black;
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+        color: #bbb;
+        font-feature-settings: "smcp", "zero";
+      }
+  .navbar .form-control::placeholder {
+    color: #aaa;
+  }
+  .card {
+    background-color: black;
+    border: solid 7px black;
+    border-radius: 5px;
+    color: white;
+    min-width: 250px; 
+    max-width: 300px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .container{
+    /* background-color: black; */
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .card img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .navbar {
+    background-color: black !important;
+    border-bottom: none;
     box-shadow: none;
   }
 
+  .navbar-brand {
+    font-weight: bold;
+    font-size:large;
+    color: #c30d0d!important;
+    letter-spacing: 1px;
+    font-feature-settings: "smcp", "zero";
+  }
 
-.nav-link {
-  color: white !important;
-  font-weight: 500;
-  font-size: large;
-  font-family: 'Trebuchet MS', sans-serif;
-}
+  @media (max-width: 768px) {
+    .hero-header {
+      height: 450px;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-.nav-link:hover {
-  color: #c30d0d!important;
-}
+    .hero-header h1 {
+      font-size: 1.5rem;
+    }
 
+    .hero-header p {
+      font-size: 1rem;
+    }
 
-.btn-danger {
-  background-color: #c30d0d;
-  border: none;
-  font-weight: bold;
-}
+    .scrolling-wrapper {
+      gap: 0.5rem;
+      padding-bottom: 1rem;
+    }
 
-.btn-danger:hover {
-  background-color: white;
-  color: #c30d0d;
-}
+    .card,
+    .in-theater-card,
+    .news-card {
+      width: 250px !important;
+      margin-right: 10px;
+    }
 
-.form-control {
-  background-color: black;
-  border: 1px solid #444;
-  color: white;
-}
+    .card img,
+    .in-theater-card img {
+      height: 250px !important;
+    }
 
-.form-control::placeholder {
-  color: #aaa;
-}
-.milan{
-  background-color: black;
-  border: solid 1px #c30d0d;
-  padding: 20px;
-  border-radius: 10px;
-  color: #aaa;
-}
-  </style>
-</head>
-<div class="body-overlay">
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" style="border-bottom: none;">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
-    
-    <!-- Left: Brand -->
-    <a class="navbar-brand fw-bold text-danger" href="#" style="font-size: 1.5rem;">MOVIEVIEW</a>
+    .news-card img {
+      height: 150px !important;
+    }
 
-    <!-- Middle: Nav links -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item px-3">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        
-       <li class="nav-item px-3">
-  <a class="nav-link" href="index.html#contactSection">Contact</a>
-</li>
+    .container,
+    .box-office-item,
+    .navbar-brand,
+    .navbar .nav-link {
+      font-size: 0.9rem !important;
+    }
 
-        <li class="nav-item px-3">
-          <a class="nav-link" href="index.html#aboutSection">About</a>
-        </li>
+    .form-control,
+    .btn {
+      font-size: 0.9rem !important;
+    }
 
-      </ul>
-    </div>
+    .navbar-toggler {
+      border: none;
+    }
 
-    <!-- Right: Search -->
-    <form class="d-flex ms-auto" role="search" style="max-width: 300px;">
-      <input class="form-control me-2 bg-black text-white border-secondary" type="search" placeholder="Search Movies..." aria-label="Search">
-      <button class="btn btn-danger" type="submit">Search</button>
-    </form>
-    
-  </div>
-</nav>
-
-  <div class="container py-4">
-
-    <h2 id="sectionTitle" class="mb-4" style="color: #c30d0d;"></h2>
-    <div id="movieGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-      <!-- Cards will be injected here -->
-    </div>
-  </div>
-    <section class="container my-5">
-      <div class="milan">
-    <h2 class="section-title">Our Team</h2>
-    <div class="row">
-      <div class="col-md-4 team-member">
-        <img src="user.png" alt="Milan">
-        <h5>Milan Gohil</h5>
-        <p>Founder & Developer</p>
-      </div>
-      <div class="col-md-4 team-member">
-        <img src="team.jpg" alt="Support">
-        <h5>Team Support</h5>
-        <p>Community & Content</p>
-      </div>
-      <div class="col-md-4 team-member">
-        <img src="team.jpg" alt="Design">
-        <h5>UI Designer</h5>
-        <p>UX & Aesthetics</p>
-      </div>
-      </div>
-    </div>
-  </section>
-<footer>
-    <p>© 2025 MOVIEVIEW. Designed by Milan Gohil</p>
-  </footer>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-const type = urlParams.get("type");
-const category = urlParams.get("category");
-const search = urlParams.get("search");
-
-const sectionTitle = document.getElementById("sectionTitle");
-
-// Set Section Title
-if (type && category) {
-  sectionTitle.innerHTML = `${type.toUpperCase()} ${category.toUpperCase()}`;
-  sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
-} else if (search) {
-  sectionTitle.innerHTML = `Search Results for "<span class="text-light">${search}</span>"`;
-  sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
-} else {
-  sectionTitle.innerHTML = "All Movies and Series";
-  sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
-}
-
-
-
-// Movie container
-const movieContainer = document.getElementById("movieList");
-
-// Filter logic
-let filteredMovies = [];
-
-if (search) {
-  filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(search.toLowerCase())
-  );
-} else if (type && category) {
-  filteredMovies = movies.filter(
-    (movie) =>
-      movie.type === type.toLowerCase() &&
-      movie.category === category.toLowerCase()
-  );
-} else {
-  filteredMovies = movies; // Show all if no filter
-}
-
-// Render cards
-const card = `
-  <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-    <div class="movie-card">
-      <img src="${movie.poster}" class="movie-poster" alt="${movie.title}">
-      <div class="movie-details">
-        <strong>${movie.title}</strong><br>
-        <span>${movie.info}</span>
-      </div>
-    </div>
-  </div>
-`;
-
-
-  </script>
-  <script>
-    
-    
-
-    const data = [
-      // BOLLYWOOD 
-      { 
-  title: "Saiyaara", 
-  type: "bollywood", 
-  category: "movie", 
-  rating: 8.4, 
-  poster: "sa.jpeg", 
-  review: "An emotional rollercoaster of love and sacrifice." 
-},
-{ title: "Metro in Dino", type: "bollywood", category: "movie", rating: 8.3, poster: "metro.jpg", review: "An emotional rollercoaster of love and sacrifice." },
-{ title: "Kesari Chapter 2", type: "bollywood", category: "movie", rating: 8.0, poster: "Kesari Chapter 2.jpg", review: "A patriotic sequel that honors valor with gripping intensity." },
-{ title: "Maalik", type: "bollywood", category: "movie", rating: 8.0, poster: "mallik.jpg", review: "A powerful tale of justice, faith, and leadership." },
-{ title: "Bhool Chuk Maaf", type: "bollywood", category: "movie", rating: 7.9, poster: "Housefull 5.jpg", review: "A quirky blend of humor and heartfelt moments." },
-{ title: "Housefull 5", type: "bollywood", category: "movie", rating: 7.7, poster: "chava.jpeg", review: "Packed with chaos and comedy, this installment delivers laughs aplenty." },
-{ title: "Stree 2", type: "bollywood", category: "movie", rating: 7.5, poster: "strree.webp", review: "A thrilling yet hilarious horror-comedy sequel." },
-{ title: "Chhaava", type: "bollywood", category: "movie", rating: 7.3, poster: "chava.jpeg", review: "A historical drama rich in emotion and action." },
-{ title: "Sitaare Zameen Par", type: "bollywood", category: "movie", rating: 7.3, poster: "sitarre.jpg", review: "An inspiring story that shines light on overlooked brilliance." },
-{ title: "Maa", type: "bollywood", category: "movie", rating: 7.3, poster: "maa.jpg", review: "A touching tribute to unconditional maternal love." },
-{ title: "Sikandar", type: "bollywood", category: "movie", rating: 7.3, poster: "sikandar.webp", review: "An action-packed journey of ambition and courage." },
-{ title: "Yodha", type: "bollywood", category: "movie", rating: 7.2, poster: "yodha.webp", review: "A daring tale of a soldier battling both enemies and fate." },
-{ title: "Santosh", type: "bollywood", category: "movie", rating: 7.1, poster: "santosh.jpg", review: "A subtle, slow-burn narrative with a deep moral core." },
-{ title: "Sky Force", type: "bollywood", category: "movie", rating: 6.9, poster: "sky.webp", review: "High-altitude heroism with visual flair but shaky storytelling." },
-{ title: "Deva", type: "bollywood", category: "movie", rating: 6.7, poster: "deva.webp", review: "A stylized action flick with strong visuals but predictable plot." },
-{ title: "Fateh", type: "bollywood", category: "movie", rating: 6.2, poster: "fateh.webp", review: "A decent action-drama that struggles to find its pace." },
-
-// BOLLYWOOD SERIES
-{ title: "Gullak Season 4", type: "bollywood", category: "series", rating: 9.1, poster: "Gullak Season 4.webp", review: "A heartwarming portrayal of middle-class life with relatable charm." },
-{ title: "Kota Factory Season 3", type: "bollywood", category: "series", rating: 9.0, poster: "kota.webp", review: "A deeply emotional look into student struggles and resilience." },
-{ title: "Panchayat Season 3", type: "bollywood", category: "series", rating: 9.0, poster: "panchayat.jpg", review: "Rural simplicity meets sharp humor and touching realism." },
-{ title: "Rocket Boys 2", type: "bollywood", category: "series", rating: 8.9, poster: "rocket.jpg", review: "An inspiring celebration of India's scientific legacy." },
-{ title: "AIR (All India Rankers)", type: "bollywood", category: "series", rating: 8.9, poster: "air.avif", review: "A raw, authentic take on the competitive education system." },
-{ title: "Scam 1992", type: "bollywood", category: "series", rating: 8.8, poster: "scam.jpg", review: "A gripping financial thriller that redefined Indian web series." },
-{ title: "Asur Season 1", type: "bollywood", category: "series", rating: 8.4, poster: "asur.jpg", review: "A dark and thrilling mix of mythology and murder mystery." },
-{ title: "Mirzapur Season 3", type: "bollywood", category: "series", rating: 8.3, poster: "mirza.jpg", review: "The crime saga continues with power, politics, and vengeance." },
-{ title: "Paatal Lok Season 2", type: "bollywood", category: "series", rating: 8.2, poster: "paatal.jpg", review: "A gritty dive into the underbelly of society and justice." },
-{ title: "Taaza Khabar Season 2", type: "bollywood", category: "series", rating: 8.1, poster: "tazza.jpg", review: "A fantastical rise-from-rags tale with a dark twist." },
-{ title: "Killer Soup", type: "bollywood", category: "series", rating: 7.9, poster: "killer.jpeg", review: "A bizarrely delicious mix of crime and black comedy." },
-{ title: "Undekhi Season 3", type: "bollywood", category: "series", rating: 7.9, poster: "undekhi.jpeg", review: "Continues to expose the chilling side of unchecked power." },
-{ title: "Shekhar Holmes", type: "bollywood", category: "series", rating: 7.9, poster: "shekhar.webp", review: "A quirky detective drama with intriguing twists." },
-{ title: "Dupahiya", type: "bollywood", category: "series", rating: 7.2, poster: "dupahiya.jpg", review: "A fresh narrative on rural India’s unseen tales." },
-{ title: "Dabba Cartel", type: "bollywood", category: "series", rating: 7.1, poster: "dabbaa.jpg", review: "An offbeat crime story with a unique culinary twist." },
-
-// HOLLYWOOD MOVIES
-{ title: "Sinners", type: "hollywood", category: "movie", rating: "9.0 ⭐️", poster: "sinners.webp" },
-{ title: "Superman", type: "hollywood", category: "movie", rating: 8.8, poster: "superman.jpg" },
-{ title: "F1 The Movie", type: "hollywood", category: "movie", rating: 8.6, poster: "f1.jpg" },
-{ title: "Mission: Impossible - The Final Reckoning", type: "hollywood", category: "movie", rating: 8.5, poster: "mi.webp" },
-{ title: "Ballerina", type: "hollywood", category: "movie", rating: 8.3, poster: "ballerinanew.jpg" },
-{ title: "The Fantastic Four: First Steps", type: "hollywood", category: "movie", rating: 8.2, poster: "fanta.jpg" },
-{ title: "28 Years Later", type: "hollywood", category: "movie", rating: 8.0, poster: "28.jpg" },
-{ title: "How to Train Your Dragon", type: "hollywood", category: "movie", rating: 7.9, poster: "jurassic.jpg" },
-{ title: "Lilo & Stitch", type: "hollywood", category: "movie", rating: 7.8, poster: "lilo.jpg" },
-{ title: "The Phoenician Scheme", type: "hollywood", category: "movie", rating: 7.6, poster: "the pho.jpg" },
-{ title: "Black Bag", type: "hollywood", category: "movie", rating: 7.5, poster: "blackbag.jpeg" },
-{ title: "Bring Her Back", type: "hollywood", category: "movie", rating: 7.4, poster: "bring.jpeg" },
-
-
-// HOLLYWOOD SERIES
-{ title: "Sinners", type: "hollywood", category: "movie", rating: 9.0, poster: "sinners.webp", review: "A dark and intense thriller that explores the price of redemption." },
-{ title: "Superman", type: "hollywood", category: "movie", rating: 8.8, poster: "superman.jpg", review: "A heroic reboot that soars with emotion and action." },
-{ title: "F1 The Movie", type: "hollywood", category: "movie", rating: 8.6, poster: "f1.jpg", review: "A high-octane ride into the adrenaline-fueled world of Formula 1." },
-{ title: "Mission: Impossible - The Final Reckoning", type: "hollywood", category: "movie", rating: 8.5, poster: "mi.webp", review: "Tom Cruise delivers yet another jaw-dropping, action-packed finale." },
-{ title: "Ballerina", type: "hollywood", category: "movie", rating: 8.3, poster: "ballerinanew.jpg", review: "A graceful yet deadly spin-off filled with elegance and vengeance." },
-{ title: "The Fantastic Four: First Steps", type: "hollywood", category: "movie", rating: 8.2, poster: "fanta.jpg", review: "A fresh and promising origin story with heart and spectacle." },
-{ title: "28 Years Later", type: "hollywood", category: "movie", rating: 8.0, poster: "28.jpg", review: "A gripping post-apocalyptic continuation that raises the stakes." },
-{ title: "How to Train Your Dragon", type: "hollywood", category: "movie", rating: 7.9, poster: "jurassic.jpg", review: "A beautifully animated tale of friendship and discovery." },
-{ title: "Lilo & Stitch", type: "hollywood", category: "movie", rating: 7.8, poster: "lilo.jpg", review: "A heartwarming story about family, love, and a lovable alien." },
-{ title: "The Phoenician Scheme", type: "hollywood", category: "movie", rating: 7.6, poster: "the pho.jpg", review: "A clever political thriller with ancient secrets and modern twists." },
-{ title: "Black Bag", type: "hollywood", category: "movie", rating: 7.5, poster: "blackbag.jpeg", review: "A slick espionage film filled with tension and sleek action." },
-{ title: "Bring Her Back", type: "hollywood", category: "movie", rating: 7.4, poster: "bring.jpeg", review: "A haunting mystery driven by loss, memory, and emotional depth." },
-
-// GUJARATI MOVIES
-{ title: "Kasoombo", type: "gujarati", category: "movie", rating: 8.2, poster: "kasumbo.jpg", review: "An epic historical drama showcasing valor, sacrifice, and heritage." },
-{ title: "The Great Gujarati Matrimony", type: "gujarati", category: "movie", rating: 7.5, poster: "guj.jpeg", review: "A hilarious cultural ride through the chaos of arranged marriages." },
-{ title: "All the Best Pandya", type: "gujarati", category: "movie", rating: 7.5, poster: "all.jpg", review: "A feel-good family entertainer with laughter and life lessons." },
-{ title: "Ittaa Kittaa", type: "gujarati", category: "movie", rating: 4.0, poster: "itta.jpg", review: "A weak script held back a story with some potential charm." },
-{ title: "Kamthaan", type: "gujarati", category: "movie", rating: 4.0, poster: "kamthan.jpg", review: "Visually appealing but lacking depth in storytelling." },
-{ title: "Umbarro", type: "gujarati", category: "movie", rating: 4.0, poster: "umbro.jpg", review: "An attempt at drama that falters with pacing and clarity." },
-{ title: "Bhram", type: "gujarati", category: "movie", rating: 4.0, poster: "bhram.jpg", review: "A psychological theme that gets lost in an uneven narrative." },
-{ title: "Shubhchintak", type: "gujarati", category: "movie", rating: 4.0, poster: "shubh.jpg", review: "Tries to mix suspense with sentiment but ends up confused." },
-{ title: "Kaashi Raaghav", type: "gujarati", category: "movie", rating: 4.0, poster: "kashi.jpeg", review: "An emotional journey that fails to strike the right chord." },
-{ title: "Fakt Purusho Maate", type: "gujarati", category: "movie", rating: 3.5, poster: "faktputrusho.jpg", review: "A gender-twist comedy that misses its punchlines." },
-{ title: "Mithada Maheman", type: "gujarati", category: "movie", rating: 3.5, poster: "mitheda.jpg", review: "Light-hearted but predictable and underwhelming." },
-{ title: "Shastra", type: "gujarati", category: "movie", rating: 3.5, poster: "shastra.jpg", review: "An action drama that lacks both intensity and direction." },
-{ title: "Nasoor", type: "gujarati", category: "movie", rating: 3.0, poster: "nasoor.jpg", review: "A dark concept poorly executed with weak performances." },
-// GUJARATI SERIES
-{ title: "Vitthal Teedi Season 2", type: "gujarati", category: "series", rating: 9.0, poster: "Vitthal Teedi.jpg", review: "A brilliant continuation of a gripping tale of intellect and emotion." },
-{ title: "Chaskela", type: "gujarati", category: "series", rating: 8.9, poster: "chaskela.jpeg", review: "A bold, witty, and relatable portrayal of Gen-Z friendship and chaos." },
-{ title: "Kadak Mitthi Season 2", type: "gujarati", category: "series", rating: 8.5, poster: "kadak.jpg", review: "A sweet yet sharp story of bonds, maturity, and life’s flavors." },
-{ title: "Gujju Bhai Ni Series", type: "gujarati", category: "series", rating: 8.4, poster: "gujju.webp", review: "Full of Gujarati humor and heartwarming family fun." },
-{ title: "Hello!", type: "gujarati", category: "series", rating: 7.8, poster: "hello.avif", review: "A breezy, light-hearted series with lovable characters and moments." },
-{ title: "Vat vat ma", type: "gujarati", category: "series", rating: 6.8, poster: "vat.jpg", review: "Attempts humor through conversations, but loses pace and punch." }
-
-    ];
-    
-// Prevent form reload and handle search manually
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent page reload
-
-  const searchQuery = document.querySelector("input[type='search']").value.trim();
-  const movieGrid = document.getElementById("movieGrid");
-
-  if (searchQuery) {
-    const results = data.filter(movie =>
-      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    document.getElementById("sectionTitle").textContent = `Search Results for "${searchQuery}"`;
-
-    if (results.length === 0) {
-      movieGrid.innerHTML = `<div class="text-light p-3">No results found for "<span class="text-warning">${searchQuery}</span>"</div>`;
-    } else {
-      movieGrid.innerHTML = "";
-      results.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "col";
-        card.innerHTML = `
-          <div class="card">
-            <img src="${item.poster}" class="card-img-top" alt="${item.title}">
-            <div class="card-body">
-              <h5 class="card-title">${item.title}</h5>
-              <h5 class="card-title">${item.review}</h5>
-              <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
-            </div>
-          </div>
-        `;
-        movieGrid.appendChild(card);
-      });
+    .navbar-toggler:focus {
+      box-shadow: none;
     }
   }
-});
 
-    const filtered = data.filter(item => item.type === type && item.category === category);
+  .nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: large;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
 
-    const grid = document.getElementById("movieGrid");
-    if (filtered.length === 0) {
-      grid.innerHTML = `<div class='text-center text-muted'>No content found for your selection.</div>`;
-    } else {
-      filtered.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "col";
-        card.innerHTML = `
-          <div class="card">
-            <img src="${item.poster}" class="card-img-top" alt="${item.title}">
-            <div class="card-body">
-              <h5 class="card-title">${item.title}</h5>
-              <h5 class="card-title">${item.review}</h5>
-              <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-    window.onload = function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const searchQuery = urlParams.get("search");
-  const movieGrid = document.getElementById("movieGrid");
+  .nav-link:hover {
+    color: #c30d0d!important;
+  }
 
-  if (searchQuery) {
-    document.querySelector("input[type='search']").value = searchQuery;
 
-    const results = data.filter(movie =>
-      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+  .btn-danger {
+    background-color: #c30d0d;
+    border: none;
+    font-weight: bold;
+  }
 
-    if (results.length === 0) {
-      movieGrid.innerHTML = `<div class="text-light p-3">No results found for "<span class="text-warning">${searchQuery}</span>"</div>`;
-    } else {
-      movieGrid.innerHTML = "";
-      results.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "col";
-        card.innerHTML = `
-          <div class="card">
-            <img src="${item.poster}" class="card-img-top" alt="${item.title}">
-            <div class="card-body">
-              <h5 class="card-title">${item.title}</h5>
-              <h5 class="card-title">${item.review}</h5>
-              <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
-            </div>
-          </div>
-        `;
-        movieGrid.appendChild(card);
-      });
-    }
+  .btn-danger:hover {
+    background-color: white;
+    color: #c30d0d;
+  }
+
+  .form-control {
+    background-color: black;
+    border: 1px solid #444;
+    color: white;
+  }
+
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  .milan{
+    background-color: black;
+    border: solid 1px #c30d0d;
+    padding: 20px;
+    border-radius: 10px;
+    color: #aaa;
+  }
+    </style>
+  </head>
+  <div class="body-overlay">
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" style="border-bottom: none;">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      
+      <!-- Left: Brand -->
+      <a class="navbar-brand fw-bold text-danger" href="#" style="font-size: 1.5rem;">MOVIEVIEW</a>
+
+      <!-- Middle: Nav links -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          
+        <li class="nav-item px-3">
+    <a class="nav-link" href="index.html#contactSection">Contact</a>
+  </li>
+
+          <li class="nav-item px-3">
+            <a class="nav-link" href="index.html#aboutSection">About</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Right: Search -->
+      <form class="d-flex ms-auto" role="search" style="max-width: 300px;">
+        <input class="form-control me-2 bg-black text-white border-secondary" type="search" placeholder="Search Movies..." aria-label="Search">
+        <button class="btn btn-danger" type="submit">Search</button>
+      </form>
+      
+    </div>
+  </nav>
+
+    <div class="container py-4">
+
+      <h2 id="sectionTitle" class="mb-4" style="color: #c30d0d;"></h2>
+      <div id="movieGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Cards will be injected here -->
+      </div>
+    </div>
+      <section class="container my-5">
+        <div class="milan">
+      <h2 class="section-title">Our Team</h2>
+      <div class="row">
+        <div class="col-md-4 team-member">
+          <img src="user.png" alt="Milan">
+          <h5>Milan Gohil</h5>
+          <p>Founder & Developer</p>
+        </div>
+        <div class="col-md-4 team-member">
+          <img src="team.jpg" alt="Support">
+          <h5>Team Support</h5>
+          <p>Community & Content</p>
+        </div>
+        <div class="col-md-4 team-member">
+          <img src="team.jpg" alt="Design">
+          <h5>UI Designer</h5>
+          <p>UX & Aesthetics</p>
+        </div>
+        </div>
+      </div>
+    </section>
+  <footer>
+      <p>© 2025 MOVIEVIEW. Designed by Milan Gohil</p>
+    </footer>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+  const type = urlParams.get("type");
+  const category = urlParams.get("category");
+  const search = urlParams.get("search");
+
+  const sectionTitle = document.getElementById("sectionTitle");
+
+  // Set Section Title
+  if (type && category) {
+    sectionTitle.innerHTML = `${type.toUpperCase()} ${category.toUpperCase()}`;
+    sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
+  } else if (search) {
+    sectionTitle.innerHTML = `Search Results for "<span class="text-light">${search}</span>"`;
+    sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
   } else {
-    // Default behavior: load based on type & category
-    const type = urlParams.get('type');
-    const category = urlParams.get('category');
-    const sectionTitle = document.getElementById("sectionTitle");
-    sectionTitle.textContent = `${type?.toUpperCase()} ${category?.toUpperCase()}`;
-
-    const filtered = data.filter(item => item.type === type && item.category === category);
-
-    if (filtered.length === 0) {
-      movieGrid.innerHTML = `<div class='text-center text-muted'>No content found for your selection.</div>`;
-    } else {
-      movieGrid.innerHTML = "";
-      filtered.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "col";
-        card.innerHTML = `
-          <div class="card">
-            <img src="${item.poster}" class="card-img-top" alt="${item.title}">
-            <div class="card-body">
-              <h5 class="card-title">${item.title}</h5>
-              <h5 class="card-title">${item.review}</h5>
-              <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
-            </div>
-          </div>
-        `;
-        movieGrid.appendChild(card);
-      });
-    }
+    sectionTitle.innerHTML = "All Movies and Series";
+    sectionTitle.classList.add("text-danger", "fw-bold", "text-center", "my-4");
   }
-};
 
-  </script>
 
-</body>
-</div>
-</html>
+  
+  // Movie container
+  const movieContainer = document.getElementById("movieList");
+
+  // Filter logic
+  let filteredMovies = [];
+
+  if (search) {
+    filteredMovies = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search.toLowerCase())
+    );
+  } else if (type && category) {
+    filteredMovies = movies.filter(
+      (movie) =>
+        movie.type === type.toLowerCase() &&
+        movie.category === category.toLowerCase()
+    );
+  } else {
+    filteredMovies = movies; // Show all if no filter
+  }
+
+  // Render cards
+  if (filteredMovies.length === 0) {
+    movieContainer.innerHTML = "<h3 class='text-light text-center'>No results found.</h3>";
+  } else {
+    filteredMovies.forEach((movie) => {
+      const card = document.createElement("div");
+      card.className = "col-md-3 mb-4";
+      card.innerHTML = `
+        <div class="card bg-dark text-white border border-danger shadow-lg">
+          <img src="${movie.poster}" class="card-img-top" alt="${movie.title}">
+          <div class="card-body text-center">
+            <h5 class="card-title">${movie.title}</h5>
+            <p class="card-text">⭐ ${movie.rating}</p>
+          </div>
+        </div>
+      `;
+      movieContainer.appendChild(card);
+    });
+  }
+
+    </script>
+    <script>
+      
+      
+
+      const data = [
+        // BOLLYWOOD 
+        { 
+    title: "Saiyaara", 
+    type: "bollywood", 
+    category: "movie", 
+    rating: 8.4, 
+    poster: "sa.jpeg", 
+    review: "An emotional rollercoaster of love and sacrifice." 
+  },
+  { title: "Metro in Dino", type: "bollywood", category: "movie", rating: 8.3, poster: "metro.jpg", review: "An emotional rollercoaster of love and sacrifice." },
+  { title: "Kesari Chapter 2", type: "bollywood", category: "movie", rating: 8.0, poster: "Kesari Chapter 2.jpg", review: "A patriotic sequel that honors valor with gripping intensity." },
+  { title: "Maalik", type: "bollywood", category: "movie", rating: 8.0, poster: "mallik.jpg", review: "A powerful tale of justice, faith, and leadership." },
+  { title: "Bhool Chuk Maaf", type: "bollywood", category: "movie", rating: 7.9, poster: "Housefull 5.jpg", review: "A quirky blend of humor and heartfelt moments." },
+  { title: "Housefull 5", type: "bollywood", category: "movie", rating: 7.7, poster: "chava.jpeg", review: "Packed with chaos and comedy, this installment delivers laughs aplenty." },
+  { title: "Stree 2", type: "bollywood", category: "movie", rating: 7.5, poster: "strree.webp", review: "A thrilling yet hilarious horror-comedy sequel." },
+  { title: "Chhaava", type: "bollywood", category: "movie", rating: 7.3, poster: "chava.jpeg", review: "A historical drama rich in emotion and action." },
+  { title: "Sitaare Zameen Par", type: "bollywood", category: "movie", rating: 7.3, poster: "sitarre.jpg", review: "An inspiring story that shines light on overlooked brilliance." },
+  { title: "Maa", type: "bollywood", category: "movie", rating: 7.3, poster: "maa.jpg", review: "A touching tribute to unconditional maternal love." },
+  { title: "Sikandar", type: "bollywood", category: "movie", rating: 7.3, poster: "sikandar.webp", review: "An action-packed journey of ambition and courage." },
+  { title: "Yodha", type: "bollywood", category: "movie", rating: 7.2, poster: "yodha.webp", review: "A daring tale of a soldier battling both enemies and fate." },
+  { title: "Santosh", type: "bollywood", category: "movie", rating: 7.1, poster: "santosh.jpg", review: "A subtle, slow-burn narrative with a deep moral core." },
+  { title: "Sky Force", type: "bollywood", category: "movie", rating: 6.9, poster: "sky.webp", review: "High-altitude heroism with visual flair but shaky storytelling." },
+  { title: "Deva", type: "bollywood", category: "movie", rating: 6.7, poster: "deva.webp", review: "A stylized action flick with strong visuals but predictable plot." },
+  { title: "Fateh", type: "bollywood", category: "movie", rating: 6.2, poster: "fateh.webp", review: "A decent action-drama that struggles to find its pace." },
+
+  // BOLLYWOOD SERIES
+  { title: "Gullak Season 4", type: "bollywood", category: "series", rating: 9.1, poster: "Gullak Season 4.webp", review: "A heartwarming portrayal of middle-class life with relatable charm." },
+  { title: "Kota Factory Season 3", type: "bollywood", category: "series", rating: 9.0, poster: "kota.webp", review: "A deeply emotional look into student struggles and resilience." },
+  { title: "Panchayat Season 3", type: "bollywood", category: "series", rating: 9.0, poster: "panchayat.jpg", review: "Rural simplicity meets sharp humor and touching realism." },
+  { title: "Rocket Boys 2", type: "bollywood", category: "series", rating: 8.9, poster: "rocket.jpg", review: "An inspiring celebration of India's scientific legacy." },
+  { title: "AIR (All India Rankers)", type: "bollywood", category: "series", rating: 8.9, poster: "air.avif", review: "A raw, authentic take on the competitive education system." },
+  { title: "Scam 1992", type: "bollywood", category: "series", rating: 8.8, poster: "scam.jpg", review: "A gripping financial thriller that redefined Indian web series." },
+  { title: "Asur Season 1", type: "bollywood", category: "series", rating: 8.4, poster: "asur.jpg", review: "A dark and thrilling mix of mythology and murder mystery." },
+  { title: "Mirzapur Season 3", type: "bollywood", category: "series", rating: 8.3, poster: "mirza.jpg", review: "The crime saga continues with power, politics, and vengeance." },
+  { title: "Paatal Lok Season 2", type: "bollywood", category: "series", rating: 8.2, poster: "paatal.jpg", review: "A gritty dive into the underbelly of society and justice." },
+  { title: "Taaza Khabar Season 2", type: "bollywood", category: "series", rating: 8.1, poster: "tazza.jpg", review: "A fantastical rise-from-rags tale with a dark twist." },
+  { title: "Killer Soup", type: "bollywood", category: "series", rating: 7.9, poster: "killer.jpeg", review: "A bizarrely delicious mix of crime and black comedy." },
+  { title: "Undekhi Season 3", type: "bollywood", category: "series", rating: 7.9, poster: "undekhi.jpeg", review: "Continues to expose the chilling side of unchecked power." },
+  { title: "Shekhar Holmes", type: "bollywood", category: "series", rating: 7.9, poster: "shekhar.webp", review: "A quirky detective drama with intriguing twists." },
+  { title: "Dupahiya", type: "bollywood", category: "series", rating: 7.2, poster: "dupahiya.jpg", review: "A fresh narrative on rural India’s unseen tales." },
+  { title: "Dabba Cartel", type: "bollywood", category: "series", rating: 7.1, poster: "dabbaa.jpg", review: "An offbeat crime story with a unique culinary twist." },
+
+  // HOLLYWOOD MOVIES
+  { title: "Sinners", type: "hollywood", category: "movie", rating: "9.0 ⭐️", poster: "sinners.webp" },
+  { title: "Superman", type: "hollywood", category: "movie", rating: 8.8, poster: "superman.jpg" },
+  { title: "F1 The Movie", type: "hollywood", category: "movie", rating: 8.6, poster: "f1.jpg" },
+  { title: "Mission: Impossible - The Final Reckoning", type: "hollywood", category: "movie", rating: 8.5, poster: "mi.webp" },
+  { title: "Ballerina", type: "hollywood", category: "movie", rating: 8.3, poster: "ballerinanew.jpg" },
+  { title: "The Fantastic Four: First Steps", type: "hollywood", category: "movie", rating: 8.2, poster: "fanta.jpg" },
+  { title: "28 Years Later", type: "hollywood", category: "movie", rating: 8.0, poster: "28.jpg" },
+  { title: "How to Train Your Dragon", type: "hollywood", category: "movie", rating: 7.9, poster: "jurassic.jpg" },
+  { title: "Lilo & Stitch", type: "hollywood", category: "movie", rating: 7.8, poster: "lilo.jpg" },
+  { title: "The Phoenician Scheme", type: "hollywood", category: "movie", rating: 7.6, poster: "the pho.jpg" },
+  { title: "Black Bag", type: "hollywood", category: "movie", rating: 7.5, poster: "blackbag.jpeg" },
+  { title: "Bring Her Back", type: "hollywood", category: "movie", rating: 7.4, poster: "bring.jpeg" },
+
+
+  // HOLLYWOOD SERIES
+  { title: "Sinners", type: "hollywood", category: "movie", rating: 9.0, poster: "sinners.webp", review: "A dark and intense thriller that explores the price of redemption." },
+  { title: "Superman", type: "hollywood", category: "movie", rating: 8.8, poster: "superman.jpg", review: "A heroic reboot that soars with emotion and action." },
+  { title: "F1 The Movie", type: "hollywood", category: "movie", rating: 8.6, poster: "f1.jpg", review: "A high-octane ride into the adrenaline-fueled world of Formula 1." },
+  { title: "Mission: Impossible - The Final Reckoning", type: "hollywood", category: "movie", rating: 8.5, poster: "mi.webp", review: "Tom Cruise delivers yet another jaw-dropping, action-packed finale." },
+  { title: "Ballerina", type: "hollywood", category: "movie", rating: 8.3, poster: "ballerinanew.jpg", review: "A graceful yet deadly spin-off filled with elegance and vengeance." },
+  { title: "The Fantastic Four: First Steps", type: "hollywood", category: "movie", rating: 8.2, poster: "fanta.jpg", review: "A fresh and promising origin story with heart and spectacle." },
+  { title: "28 Years Later", type: "hollywood", category: "movie", rating: 8.0, poster: "28.jpg", review: "A gripping post-apocalyptic continuation that raises the stakes." },
+  { title: "How to Train Your Dragon", type: "hollywood", category: "movie", rating: 7.9, poster: "jurassic.jpg", review: "A beautifully animated tale of friendship and discovery." },
+  { title: "Lilo & Stitch", type: "hollywood", category: "movie", rating: 7.8, poster: "lilo.jpg", review: "A heartwarming story about family, love, and a lovable alien." },
+  { title: "The Phoenician Scheme", type: "hollywood", category: "movie", rating: 7.6, poster: "the pho.jpg", review: "A clever political thriller with ancient secrets and modern twists." },
+  { title: "Black Bag", type: "hollywood", category: "movie", rating: 7.5, poster: "blackbag.jpeg", review: "A slick espionage film filled with tension and sleek action." },
+  { title: "Bring Her Back", type: "hollywood", category: "movie", rating: 7.4, poster: "bring.jpeg", review: "A haunting mystery driven by loss, memory, and emotional depth." },
+
+  // GUJARATI MOVIES
+  { title: "Kasoombo", type: "gujarati", category: "movie", rating: 8.2, poster: "kasumbo.jpg", review: "An epic historical drama showcasing valor, sacrifice, and heritage." },
+  { title: "The Great Gujarati Matrimony", type: "gujarati", category: "movie", rating: 7.5, poster: "guj.jpeg", review: "A hilarious cultural ride through the chaos of arranged marriages." },
+  { title: "All the Best Pandya", type: "gujarati", category: "movie", rating: 7.5, poster: "all.jpg", review: "A feel-good family entertainer with laughter and life lessons." },
+  { title: "Ittaa Kittaa", type: "gujarati", category: "movie", rating: 4.0, poster: "itta.jpg", review: "A weak script held back a story with some potential charm." },
+  { title: "Kamthaan", type: "gujarati", category: "movie", rating: 4.0, poster: "kamthan.jpg", review: "Visually appealing but lacking depth in storytelling." },
+  { title: "Umbarro", type: "gujarati", category: "movie", rating: 4.0, poster: "umbro.jpg", review: "An attempt at drama that falters with pacing and clarity." },
+  { title: "Bhram", type: "gujarati", category: "movie", rating: 4.0, poster: "bhram.jpg", review: "A psychological theme that gets lost in an uneven narrative." },
+  { title: "Shubhchintak", type: "gujarati", category: "movie", rating: 4.0, poster: "shubh.jpg", review: "Tries to mix suspense with sentiment but ends up confused." },
+  { title: "Kaashi Raaghav", type: "gujarati", category: "movie", rating: 4.0, poster: "kashi.jpeg", review: "An emotional journey that fails to strike the right chord." },
+  { title: "Fakt Purusho Maate", type: "gujarati", category: "movie", rating: 3.5, poster: "faktputrusho.jpg", review: "A gender-twist comedy that misses its punchlines." },
+  { title: "Mithada Maheman", type: "gujarati", category: "movie", rating: 3.5, poster: "mitheda.jpg", review: "Light-hearted but predictable and underwhelming." },
+  { title: "Shastra", type: "gujarati", category: "movie", rating: 3.5, poster: "shastra.jpg", review: "An action drama that lacks both intensity and direction." },
+  { title: "Nasoor", type: "gujarati", category: "movie", rating: 3.0, poster: "nasoor.jpg", review: "A dark concept poorly executed with weak performances." },
+  // GUJARATI SERIES
+  { title: "Vitthal Teedi Season 2", type: "gujarati", category: "series", rating: 9.0, poster: "Vitthal Teedi.jpg", review: "A brilliant continuation of a gripping tale of intellect and emotion." },
+  { title: "Chaskela", type: "gujarati", category: "series", rating: 8.9, poster: "chaskela.jpeg", review: "A bold, witty, and relatable portrayal of Gen-Z friendship and chaos." },
+  { title: "Kadak Mitthi Season 2", type: "gujarati", category: "series", rating: 8.5, poster: "kadak.jpg", review: "A sweet yet sharp story of bonds, maturity, and life’s flavors." },
+  { title: "Gujju Bhai Ni Series", type: "gujarati", category: "series", rating: 8.4, poster: "gujju.webp", review: "Full of Gujarati humor and heartwarming family fun." },
+  { title: "Hello!", type: "gujarati", category: "series", rating: 7.8, poster: "hello.avif", review: "A breezy, light-hearted series with lovable characters and moments." },
+  { title: "Vat vat ma", type: "gujarati", category: "series", rating: 6.8, poster: "vat.jpg", review: "Attempts humor through conversations, but loses pace and punch." }
+
+      ];
+      
+  // Prevent form reload and handle search manually
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    const searchQuery = document.querySelector("input[type='search']").value.trim();
+    const movieGrid = document.getElementById("movieGrid");
+
+    if (searchQuery) {
+      const results = data.filter(movie =>
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      document.getElementById("sectionTitle").textContent = `Search Results for "${searchQuery}"`;
+
+      if (results.length === 0) {
+        movieGrid.innerHTML = `<div class="text-light p-3">No results found for "<span class="text-warning">${searchQuery}</span>"</div>`;
+      } else {
+        movieGrid.innerHTML = "";
+        results.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "col";
+          card.innerHTML = `
+            <div class="card">
+              <img src="${item.poster}" class="card-img-top" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <h5 class="card-title">${item.review}</h5>
+                <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
+              </div>
+            </div>
+          `;
+          movieGrid.appendChild(card);
+        });
+      }
+    }
+  });
+
+      const filtered = data.filter(item => item.type === type && item.category === category);
+
+      const grid = document.getElementById("movieGrid");
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class='text-center text-muted'>No content found for your selection.</div>`;
+      } else {
+        filtered.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "col";
+          card.innerHTML = `
+            <div class="card">
+              <img src="${item.poster}" class="card-img-top" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <h5 class="card-title">${item.review}</h5>
+                <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
+              </div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+      window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get("search");
+    const movieGrid = document.getElementById("movieGrid");
+
+    if (searchQuery) {
+      document.querySelector("input[type='search']").value = searchQuery;
+
+      const results = data.filter(movie =>
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      if (results.length === 0) {
+        movieGrid.innerHTML = `<div class="text-light p-3">No results found for "<span class="text-warning">${searchQuery}</span>"</div>`;
+      } else {
+        movieGrid.innerHTML = "";
+        results.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "col";
+          card.innerHTML = `
+            <div class="card">
+              <img src="${item.poster}" class="card-img-top" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <h5 class="card-title">${item.review}</h5>
+                <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
+              </div>
+            </div>
+          `;
+          movieGrid.appendChild(card);
+        });
+      }
+    } else {
+      // Default behavior: load based on type & category
+      const type = urlParams.get('type');
+      const category = urlParams.get('category');
+      const sectionTitle = document.getElementById("sectionTitle");
+      sectionTitle.textContent = `${type?.toUpperCase()} ${category?.toUpperCase()}`;
+
+      const filtered = data.filter(item => item.type === type && item.category === category);
+
+      if (filtered.length === 0) {
+        movieGrid.innerHTML = `<div class='text-center text-muted'>No content found for your selection.</div>`;
+      } else {
+        movieGrid.innerHTML = "";
+        filtered.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "col";
+          card.innerHTML = `
+            <div class="card">
+              <img src="${item.poster}" class="card-img-top" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <h5 class="card-title">${item.review}</h5>
+                <p class="rating"><i class="fas fa-star"></i> ${item.rating}</p>
+              </div>
+            </div>
+          `;
+          movieGrid.appendChild(card);
+        });
+      }
+    }
+  };
+
+    </script>
+
+  </body>
+  </div>
+  </html>
