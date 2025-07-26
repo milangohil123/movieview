@@ -1,14 +1,14 @@
 const movies = [
-  { title: "THE BATMAN", poster: "batman.jpeg", rating: 4.5, trailer: "https://www.youtube.com/watch?v=mqqft2x_Aa4", review: "A dark, gritty, and thrilling take on Gotham’s caped crusader." },
-  { title: "Inception", poster: "inseption.jpeg", rating: 5, trailer: "https://www.youtube.com/watch?v=YoHD9XEInc0", review: "A visually stunning masterpiece with a mind-bending story." },
-  { title: "Interstellar", poster: "inter.jpeg", rating: 4.8, trailer: "https://www.youtube.com/watch?v=zSWdZVtXT7E", review: "Emotionally powerful, scientifically fascinating, and visually stunning." },
-  { title: "Joker", poster: "joker.jpg", rating: 4.7, trailer: "https://www.youtube.com/watch?v=zAGVQLHvwOY", review: "A chilling origin story of the infamous villain." },
-  { title: "Avengers: Endgame", poster: "aven.jpeg", rating: 4.9, trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c", review: "A powerful conclusion to the Marvel saga." },
-  { title: "Tenet", poster: "tenet.jpeg", rating: 4.3, trailer: "https://www.youtube.com/watch?v=L3pk_TBkihU", review: "A mind-bending time-travel thriller." },
-  { title: "Iron Man", poster: "iron.jpeg", rating: 4.6, trailer: "https://www.youtube.com/watch?v=8hYlB38asDY", review: "The origin of the iconic Marvel superhero." },
-  { title: "Spider-Man: No Way Home", poster: "spy.jpeg", rating: 4.8, trailer: "https://www.youtube.com/watch?v=JfVOs4VSpmA", review: "Multiverse madness with all 3 Spider-Men." },
-  { title: "Doctor Strange", poster: "strange.jpeg", rating: 4.2, trailer: "https://www.youtube.com/watch?v=Lt-U_t2pUHI", review: "Mystical and mind-bending magic from Marvel." },
-  { title: "Black Panther", poster: "black.jpeg", rating: 4.7, trailer: "https://www.youtube.com/watch?v=xjDjIWPwcPU", review: "A cultural milestone in superhero cinema." }
+  { title: "THE BATMAN", poster: "batman.jpeg", rating: "4.5 ⭐", trailer: "https://www.youtube.com/watch?v=mqqft2x_Aa4", review: "A dark, gritty, and thrilling take on Gotham’s caped crusader." },
+  { title: "Inception", poster: "inseption.jpeg", rating: "5 ⭐", trailer: "https://www.youtube.com/watch?v=YoHD9XEInc0", review: "A visually stunning masterpiece with a mind-bending story." },
+  { title: "Interstellar", poster: "inter.jpeg", rating: "4.8 ⭐", trailer: "https://www.youtube.com/watch?v=zSWdZVtXT7E", review: "Emotionally powerful, scientifically fascinating, and visually stunning." },
+  { title: "Joker", poster: "joker.jpg", rating: "4.7 ⭐", trailer: "https://www.youtube.com/watch?v=zAGVQLHvwOY", review: "A chilling origin story of the infamous villain." },
+  { title: "Avengers: Endgame", poster: "aven.jpeg", rating: "4.9 ⭐", trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c", review: "A powerful conclusion to the Marvel saga." },
+  { title: "Tenet", poster: "tenet.jpeg", rating: "4.3 ⭐", trailer: "https://www.youtube.com/watch?v=L3pk_TBkihU", review: "A mind-bending time-travel thriller." },
+  { title: "Iron Man", poster: "iron.jpeg", rating: "4.6 ⭐", trailer: "https://www.youtube.com/watch?v=8hYlB38asDY", review: "The origin of the iconic Marvel superhero." },
+  { title: "Spider-Man: No Way Home", poster: "spy.jpeg", rating: "4.3 ⭐", trailer: "https://www.youtube.com/watch?v=JfVOs4VSpmA", review: "Multiverse madness with all 3 Spider-Men." },
+  { title: "Doctor Strange", poster: "strange.jpeg", rating: "4.2 ⭐", trailer: "https://www.youtube.com/watch?v=Lt-U_t2pUHI", review: "Mystical and mind-bending magic from Marvel." },
+  { title: "Black Panther", poster: "black.jpeg", rating: "4.2 ⭐", trailer: "https://www.youtube.com/watch?v=xjDjIWPwcPU", review: "A cultural milestone in superhero cinema." }
 ];
 
 function getStars(rating) {
