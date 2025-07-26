@@ -8,242 +8,127 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-color: #121212;
-    }
-
-    .scrolling-wrapper {
-      display: flex;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      gap: 1rem;
-    }
-
-    .in-theater-card,
-    .news-card {
-      flex: 0 0 auto;
-      width: 200px;
-      background: #1e1e1e;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-right: 1rem;
-    }
-
-    .in-theater-card img,
-    .news-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .box-office-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem 1rem;
-      border-bottom: 1px solid #444;
-    }
-
-    .rating {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #111;
-      color: #aaa;
-      padding: 1rem;
-    }
-
-    .hero-header {
-      background: url('assets/posters/270b21dd-8f3f-41e7-95a3-efca05d91bf6.jpg') no-repeat center center/cover;
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-header .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .hero-header .header-content {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .in-theater-card,
-      .news-card {
-        width: 140px;
-      }
-
-      .header-content h1 {
-        font-size: 1.6rem;
-      }
-
-      .header-content p {
-        font-size: 0.9rem;
-      }
-
-      .scrolling-wrapper {
-        gap: 0.5rem;
-      }
-
-      #movieRow {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-      }
-
-      .movie-card {
-        width: 140px;
-      }
-
-      .box-office-item {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
 </head>
 
 <body class="bg-dark text-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">MOVIEVIEW</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Movies</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Movies</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="movies.html?type=bollywood&category=movie">Bollywood</a></li>
-              <li><a class="dropdown-item" href="movies.html?type=hollywood&category=movie">Hollywood</a></li>
-              <li><a class="dropdown-item" href="movies.html?type=gujarati&category=movie">Gujarati</a></li>
+              <li><a class="dropdown-item" href="#">Bollywood</a></li>
+              <li><a class="dropdown-item" href="#">Hollywood</a></li>
+              <li><a class="dropdown-item" href="#">Gujarati</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Series</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Series</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="movies.html?type=bollywood&category=series">Bollywood</a></li>
-              <li><a class="dropdown-item" href="movies.html?type=hollywood&category=series">Hollywood</a></li>
-              <li><a class="dropdown-item" href="movies.html?type=gujarati&category=series">Gujarati</a></li>
+              <li><a class="dropdown-item" href="#">Bollywood</a></li>
+              <li><a class="dropdown-item" href="#">Hollywood</a></li>
+              <li><a class="dropdown-item" href="#">Gujarati</a></li>
             </ul>
           </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="index.html#contactSection">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactSection">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#aboutSection">About</a>
           </li>
         </ul>
-        <form onsubmit="handleSearch(event)" class="d-flex ms-auto" role="search">
-          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Movies...">
-          <button class="btn btn-outline-light" type="submit">Search</button>
+        <form onsubmit="handleSearch(event)" class="d-flex" role="search">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Movies..." />
+          <button class="btn btn-danger" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
 
-  <header class="hero-header text-center text-light">
+  <!-- Hero Header -->
+  <header class="hero-header">
     <div class="overlay"></div>
-    <div class="header-content">
-      <h1 class="display-4 fw-bold">Explore Movies & Reviews</h1>
-      <p class="lead">Watch trailers, rate movies and read reviews</p>
+    <div class="header-content text-center text-white">
+      <h1 class="fw-bold display-5">Welcome to MOVIVIEW</h1>
+      <p class="lead">Stream and download the latest movies & series</p>
     </div>
   </header>
 
-  <div class="container my-5">
-    <h2 class="mb-4">Movie Collection</h2>
-    <div class="scrolling-wrapper" id="movieRow">
-      <!-- Movie cards will be injected here -->
+  <!-- Tag Buttons -->
+  <div class="container text-center my-4">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <button class="btn btn-outline-light">Latest Movies</button>
+      <button class="btn btn-outline-light">720p</button>
+      <button class="btn btn-outline-light">1080p</button>
+      <button class="btn btn-outline-light">480p</button>
+      <button class="btn btn-warning">4K MOVIES</button>
+      <button class="btn btn-primary">JOIN TELEGRAM</button>
     </div>
   </div>
 
-  <div class="container my-5">
-    <h2 class="mb-4"><span style="color: #c30d0d;">Top News</span></h2>
-    <div class="scrolling-wrapper">
-      <div class="news-card">
-        <img src="oscar.jpg" alt="Oscar News">
-        <div class="p-3">
-          <h6>Film Academy’s Submissions Site Opens for Oscar Hopefuls</h6>
-          <p class="news-date">Jul 22 - The Hollywood Reporter</p>
+  <!-- Movie Cards -->
+  <div class="container">
+    <div class="row g-4 justify-content-center" id="movieRow">
+      <div class="col-6 col-sm-4 col-md-3">
+        <div class="card">
+          <img src="assets/posters/372e0d5e-9cef-4882-80dd-9fa333d3f6ca.png" class="card-img-top" alt="Movie 1" />
+          <div class="card-body text-center">
+            <h6>Movie Title 1</h6>
+          </div>
         </div>
       </div>
-      <div class="news-card">
-        <img src="cosby.jpg" alt="Cosby News">
-        <div class="p-3">
-          <h6>‘The Cosby Show’ Star Dies in Accidental Drowning at 54</h6>
-          <p class="news-date">Jul 21 - The Hollywood Reporter</p>
+      <div class="col-6 col-sm-4 col-md-3">
+        <div class="card">
+          <img src="assets/posters/b6c01002-76db-4334-a98a-70bf42e67f39.jpg" class="card-img-top" alt="Movie 2" />
+          <div class="card-body text-center">
+            <h6>Movie Title 2</h6>
+          </div>
         </div>
       </div>
+      <!-- Add more movie cards here -->
     </div>
   </div>
 
-  <div class="container my-5">
-    <h2 class="mb-3"><span style="color: #c30d0d;">Top box office (IND)</span> <small class="text-muted fs-6">Weekend of July 18–20</small></h2>
-    <div class="box-office-list">
-      <!-- Items here -->
-    </div>
-  </div>
-
-  <div class="container my-5">
-    <h2 class="mb-3"><span style="color: #c30d0d;">In theaters</span> <small class="text-muted fs-6">Showtimes near you</small></h2>
-    <div class="scrolling-wrapper" id="inTheaters">
-      <!-- Cards repeated dynamically -->
-    </div>
-  </div>
-
-  <div class="container text-light my-4 p-4" style="background-color: #1e1e1e; border-radius: 15px;">
-    <p class="mb-4 lead">Have questions, feedback, or partnership ideas? We're here to help! Reach out using the form below and our MOVIVIEW team will get back to you as soon as possible.</p>
-  </div>
-
-  <div id="contactSection" class="container my-5 text-light">
-    <h2 class="mb-4" style="color: #c30d0d;">Contact Us</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control bg-dark text-light border-secondary" id="name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control bg-dark text-light border-secondary" id="email">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control bg-dark text-light border-secondary" id="message" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger">Send Message</button>
-        </form>
+  <!-- Contact Section -->
+  <div id="contactSection" class="container my-5">
+    <h2 class="mb-4 text-center text-danger">Contact Us</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" placeholder="Email Address" />
+        </div>
       </div>
-      <div class="col-md-6 d-flex align-items-center">
-        <p class="lead">We’d love to hear your feedback or inquiries. Fill the form and our team will get back to you as soon as possible!</p>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
       </div>
-    </div>
+      <div class="text-center">
+        <button class="btn btn-danger" type="submit">Send Message</button>
+      </div>
+    </form>
   </div>
 
-  <div id="aboutSection" class="container text-light my-4 p-4" style="background-color: #1e1e1e; border-radius: 15px;">
-    <h4 style="color: #c30d0d;">ABOUT MOVIVIEW</h4>
-    <p style="font-size: 1rem; line-height: 1.8;">Welcome to <strong>MOVIVIEW</strong> — your one-stop destination for all things cinema. Discover movies currently in theaters, watch trailers, read reviews, and explore ratings before you hit the big screen.</p>
+  <!-- About -->
+  <div id="aboutSection" class="container my-5">
+    <h4 class="text-danger">About MOVIVIEW</h4>
+    <p class="text-light">Explore new movies, reviews, trailers, and box office info — all in one place.</p>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 MOVIEVIEW. Designed by Milan Gohil</p>
+    <p>© 2025 MOVIVIEW. Designed by Milan Gohil</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
