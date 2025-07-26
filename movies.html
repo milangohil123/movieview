@@ -154,6 +154,62 @@ footer {
   font-feature-settings: "smcp", "zero";
 }
 
+@media (max-width: 768px) {
+  .hero-header {
+    height: 300px;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .hero-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-header p {
+    font-size: 1rem;
+  }
+
+  .scrolling-wrapper {
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .card,
+  .in-theater-card,
+  .news-card {
+    width: 150px !important;
+    margin-right: 10px;
+  }
+
+  .card img,
+  .in-theater-card img {
+    height: 200px !important;
+  }
+
+  .news-card img {
+    height: 150px !important;
+  }
+
+  .container,
+  .box-office-item,
+  .navbar-brand,
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+  }
+
+  .form-control,
+  .btn {
+    font-size: 0.9rem !important;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
 
 .nav-link {
   color: white !important;
@@ -374,7 +430,7 @@ if (filteredMovies.length === 0) {
 { title: "Dabba Cartel", type: "bollywood", category: "series", rating: 7.1, poster: "dabbaa.jpg", review: "An offbeat crime story with a unique culinary twist." },
 
 // HOLLYWOOD MOVIES
-{ title: "Sinners", type: "hollywood", category: "movie", rating: 9.0, poster: "sinners.webp" },
+{ title: "Sinners", type: "hollywood", category: "movie", rating: "9.0 ⭐️", poster: "sinners.webp" },
 { title: "Superman", type: "hollywood", category: "movie", rating: 8.8, poster: "superman.jpg" },
 { title: "F1 The Movie", type: "hollywood", category: "movie", rating: 8.6, poster: "f1.jpg" },
 { title: "Mission: Impossible - The Final Reckoning", type: "hollywood", category: "movie", rating: 8.5, poster: "mi.webp" },
