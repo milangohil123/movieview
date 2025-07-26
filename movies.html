@@ -149,12 +149,48 @@ footer {
   font-feature-settings: "smcp", "zero";
 }
 
-@media (max-width: 700px) {
-  .hero-header {
-    height: 180px;
-    padding: 80px 10px;
-    text-align: center;
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  width: calc(25% - 20px); /* 4 cards per row with gap */
+  box-sizing: border-box;
+  background-color: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 992px) {
+  .movie-card {
+    width: calc(33.33% - 20px); /* 3 per row */
   }
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    width: calc(50% - 20px); /* 2 per row */
+  }
+}
+
+@media (max-width: 500px) {
+  .movie-card {
+    width: 100%; /* 1 per row on very small screens */
+  }
+}
 
   .hero-header h1 {
     font-size: 1.5rem;
@@ -204,7 +240,7 @@ footer {
   .navbar-toggler:focus {
     box-shadow: none;
   }
-}
+
 
 .nav-link {
   color: white !important;
